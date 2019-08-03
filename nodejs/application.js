@@ -1,7 +1,6 @@
 'use strict';
 
 const app = require('express')()
-const morgan = require('morgan')
 
 app.use('/api/greeting', require('./routes/greeting'))
 

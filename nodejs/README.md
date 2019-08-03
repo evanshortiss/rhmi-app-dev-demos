@@ -17,5 +17,5 @@ This starts a server on http://localhost:8080
 ## Deploy using OpenShift Source to Image
 
 ```
-oc new-app registry.redhat.io/openshift3/nodejs-010-rhel7~$THIS_REPO_URL --context-dir=java
+oc new-app nodejs:10~$THIS_REPO_URL --context-dir=nodejs --name=nodejs-greet-api
 ```

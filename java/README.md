@@ -18,5 +18,5 @@ This starts a server on http://localhost:8080
 ## Deploy using OpenShift Source to Image
 
 ```
-oc new-app redhat-openjdk18-openshift~$THIS_REPO_URL --context-dir=java
+oc new-app openshift/java:8~$THIS_REPO_URL --context-dir=java --name=springboot-greet-api
 ```
