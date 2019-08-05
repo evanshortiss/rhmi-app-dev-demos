@@ -1,0 +1,22 @@
+<br>
+<h1 class="display-4">Welcome, {{name}}!</h1>
+<p class="lead">You've successfully logeed into this service via a Red Hat SSO (Keycloak) instance.</p>
+<hr class="my-4">
+<ul>
+  <li>This page is protected using the User Facing Red Hat SSO configured on this Red Hat Managed Integration cluster.</li>
+  <li>The Node.js application that serves this application delegates authentication using the Keycloak Node.js adapter from npm.</li>
+  <li>You can achieve the same functionality using Java, and the Keycloak Java adapter from Maven.</li>
+</ul>
+<hr>
+<div>
+  <a class="btn btn-secondary btn admin" href="/admin" role="button">View Admin Page</a>
+</div>
+<style>
+  li { margin: 0 0 1em 0; }
+
+  .btn.admin {
+    margin: 0 auto;
+    display: block;
+    width: 15vw;
+  }
+</style>
