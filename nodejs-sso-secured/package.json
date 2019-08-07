@@ -19,7 +19,6 @@
     "express-session": "~1.16.2",
     "keycloak-connect": "~6.0.1",
     "kube-probe": "~0.3.2",
-    "log4js": "~4.5.1",
     "pino": "~5.13.1"
   },
   "devDependencies": {

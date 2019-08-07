@@ -4,7 +4,7 @@ const env = require('env-var')
 
 const SSO_REALM = env.get('SSO_REALM', 'rhmi-sso-example').asString()
 const SSO_SERVER_URL = env.get('SSO_SERVER_URL', 'http://localhost:8080/auth').asUrlString()
-const SSO_RESOURCE = env.get('SSO_REALM', 'nodejs-webapp').asString()
+const SSO_RESOURCE = env.get('SSO_RESOURCE', 'nodejs-webapp').asString()
 
 module.exports = {
   "realm" : SSO_REALM,

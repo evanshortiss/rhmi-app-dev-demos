@@ -13,6 +13,7 @@ const PORT = env.get('PORT', 8080).asPortNumber()
 // Create express application server and setup templating
 const app = express()
 
+// Configure server-side rendering
 app.engine('handlebars', exphbs())
 app.set('views', join(__dirname, '/views'))
 app.set('view engine', 'handlebars')
