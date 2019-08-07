@@ -9,7 +9,7 @@ const SSO_RESOURCE = env.get('SSO_RESOURCE', 'nodejs-webapp').asString()
 const ssoConfig = module.exports = {
   "realm" : SSO_REALM,
   "auth-server-url" : SSO_SERVER_URL,
-  "ssl-required" : "external",
+  "ssl-required" : "all",
   "resource" : SSO_RESOURCE,
   "public-client" : true,
   "confidential-port": 0
