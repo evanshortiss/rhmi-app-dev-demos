@@ -26,7 +26,7 @@ const kc = new Keycloak({ store }, config);
 
 // Since this application will be behind a load balancer in OpenShift/K8s
 // we need to set this flag so keycloak-connect constructs a valid redirect
-app.set('trust proxy', true);
+// app.set('trust proxy', true);
 
 // Configure Kubernetes liveness/readiness probes
 require('kube-probe')(app)
