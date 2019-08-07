@@ -17,7 +17,7 @@
     "express": "~4.17.1",
     "express-handlebars": "~3.1.0",
     "express-session": "~1.16.2",
-    "keycloak-connect": "~6.0.1",
+    "keycloak-connect": "github:evanshortiss/keycloak-nodejs-connect#debug-redirect-proto",
     "kube-probe": "~0.3.2",
     "pino": "~5.13.1"
   },
