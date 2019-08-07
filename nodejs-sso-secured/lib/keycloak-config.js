@@ -7,11 +7,11 @@ const SSO_SERVER_URL = env.get('SSO_SERVER_URL', 'http://localhost:8080/auth').a
 const SSO_RESOURCE = env.get('SSO_RESOURCE', 'nodejs-webapp').asString()
 
 const ssoConfig = module.exports = {
-  "realm" : SSO_REALM,
-  "auth-server-url" : SSO_SERVER_URL,
-  "ssl-required" : "external",
-  "resource" : SSO_RESOURCE,
-  "public-client" : true,
+  "realm": "rhmi-sso-example",
+  "auth-server-url": "https://sso-user-sso.apps.rhmiweb-462a.openshiftworkshop.com/auth",
+  "ssl-required": "external",
+  "resource": "nodejs-webapp",
+  "public-client": true,
   "confidential-port": 0
 }
 
