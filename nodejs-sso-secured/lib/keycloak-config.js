@@ -6,7 +6,7 @@ const SSO_REALM = env.get('SSO_REALM', 'rhmi-sso-example').asString()
 const SSO_SERVER_URL = env.get('SSO_SERVER_URL', 'http://localhost:8080/auth').asUrlString()
 const SSO_RESOURCE = env.get('SSO_RESOURCE', 'nodejs-webapp').asString()
 
-module.exports = {
+const ssoConfig = module.exports = {
   "realm" : SSO_REALM,
   "auth-server-url" : SSO_SERVER_URL,
   "ssl-required" : "external",
@@ -14,3 +14,5 @@ module.exports = {
   "public-client" : true,
   "confidential-port": 0
 }
+
+console.log('using SSO config: ', ssoConfig)
