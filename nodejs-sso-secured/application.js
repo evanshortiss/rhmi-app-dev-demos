@@ -24,6 +24,10 @@ const config = require('./lib/keycloak-config')
 const store = new session.MemoryStore();
 const kc = new Keycloak({ store }, config);
 
+// Need to set this to true since we're OpenShift uses HAProxy to route
+// requests without this keycloak-connect can't build a proper redirect URL
+app.set('trust proxy', true);
+
 // Configure Kubernetes liveness/readiness probes
 require('kube-probe')(app)
 
