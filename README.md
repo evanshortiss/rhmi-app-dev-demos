@@ -1,4 +1,3 @@
 # RHMI Sample Applications 
 
-These are used to perform introductory demos for deploying applications and
-securing applications using Red Hat SSO on RHMI custers.
+These are used to perform demos for deploying and securing applications using Red Hat SSO on an RHMI custer.
