@@ -2,21 +2,17 @@
 
 const app = require('express')()
 const env = require('env-var')
-const morgan = require('morgan')('combined')
+const morgan = require('morgan')
 
-const MORGAN_ENABLED = env.get('MORGAN_ENABLED', false).asBool()
+const MORGAN_ENABLED = env.get('MORGAN_ENABLED', 'false').asBool()
 
 // Need to set this to true since OpenShift uses HAProxy to route requests
 app.set('trust proxy', true);
 
 // If MORGAN_ENABLED is set to true, this will log incoming requests
-app.use((req, res, next) => {
-  if (MORGAN_ENABLED) {
-    morgan(req, res, next)
-  } else {
-    next()
-  }
-})
+app.use(morgan('combined', {
+  skip: () => !MORGAN_ENABLED
+}))
 
 app.use('/api/greeting', require('./routes/greeting'))
 
