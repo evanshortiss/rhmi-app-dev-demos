@@ -14,6 +14,17 @@ app.use(morgan('combined', {
   skip: () => !MORGAN_ENABLED
 }))
 
+app.use((req, res, next) => {
+  console.log(
+    JSON.stringify(
+      req.headers,
+      null,
+      2
+    )
+  )
+  next()
+})
+
 app.use('/api/greeting', require('./routes/greeting'))
 
 app.listen(8080, (err) => {
